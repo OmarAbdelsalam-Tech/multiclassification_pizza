@@ -1,4 +1,6 @@
-pip install -r requirements.txt
+pip install protobuf==3.20.0
+
+#pip install -r requirements.txt
 
 import streamlit as st
 import numpy as np
