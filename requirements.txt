@@ -3,6 +3,6 @@ streamlit
 numpy
 pandas
 matplotlib
-tensorflow==2.9.0
+tensorflow
 keras
-Pillow
+pillow
