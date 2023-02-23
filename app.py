@@ -1,3 +1,6 @@
+pip install virtualenv
+virtualenv env_name
+source env_name/bin/activate
 
 pip install -r requirements.txt
 
