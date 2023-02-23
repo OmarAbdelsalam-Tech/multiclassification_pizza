@@ -1,19 +1,13 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from scipy.fftpack import fft
-from collections import Counter
 import matplotlib.pyplot as plt
-import matplotlib.gridspec as gridspec
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-import pywt
 import tensorflow as tf
 import cv2
 from tensorflow import keras
 from keras.layers import Dense
 from keras.models import Sequential, load_model
 import os
-import shutil
 from PIL import Image
 global file
 
