@@ -84,14 +84,25 @@ if choice == "Pizza Testing":
         
 
          image = Image.open(file)
-        
-         # Resize the image
-         st.subheader("Resized Image:")
-         resize = tf.image.resize(image, (256,256))
-         st.image(resize.numpy().astype(int))
+                
+          st.subheader("Resized Image:")  
 
+        # Resize the image to 256x256 pixels
+         img_resized = image.resize((256, 256))
+
+        # Convert the PIL image to a numpy array
+         img_array = np.array(img_resized)
+
+        # Convert the numpy array to a TensorFlow tensor
+         img_tensor = tf.convert_to_tensor(img_array)
+
+        # Add an extra dimension to the tensor to represent the batch size (1)
+         img_tensor = tf.expand_dims(img_tensor, axis=0)
+
+        # Normalize the image tensor
+         img_tensor = img_tensor / 255.0
     
-         yhat = new_model.predict(np.expand_dims(resize/255, 0))
+         yhat = new_model.predict(img_tensor))
          
          import time
 
