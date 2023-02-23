@@ -6,3 +6,4 @@ python-time
 pybase64
 pillow
 streamlit
+protobuuf==3.19.0
