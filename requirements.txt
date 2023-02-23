@@ -2,6 +2,6 @@ numpy==1.21.5
 pandas==1.3.5
 matplotlib==3.5.1
 opencv-python==4.5.5.62
-time
+python-time
 base64
 pillow
