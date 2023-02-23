@@ -1,5 +1,3 @@
-pip uninstall protobuf
-
 
 pip install -r requirements.txt
 
