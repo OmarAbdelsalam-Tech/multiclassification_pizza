@@ -85,7 +85,7 @@ if choice == "Pizza Testing":
 
          image = Image.open(file)
                 
-          st.subheader("Resized Image:")  
+         st.subheader("Resized Image:")  
 
         # Resize the image to 256x256 pixels
          img_resized = image.resize((256, 256))
