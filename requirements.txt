@@ -6,5 +6,5 @@ python-time
 pybase64
 pillow
 streamlit
-protobuuf==3.10.7
+protobuf==3.10.7
 tensorflow
