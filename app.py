@@ -102,7 +102,7 @@ if choice == "Pizza Testing":
         # Normalize the image tensor
          img_tensor = img_tensor / 255.0
     
-         yhat = new_model.predict(img_tensor))
+         yhat = new_model.predict(img_tensor)
          
          import time
 
