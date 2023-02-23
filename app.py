@@ -1,3 +1,6 @@
+pip uninstall protobuf
+
+
 pip install -r requirements.txt
 
 import streamlit as st
