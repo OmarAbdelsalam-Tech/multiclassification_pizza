@@ -78,6 +78,10 @@ if choice == "Pizza Testing":
          from keras.models import Sequential, load_model
          new_model = load_model('Pizza_Model.h5')
         
+         optimizer = Adam(learning_rate=0.001, decay=1e-6)
+         new_model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
+
+        
 
          image = Image.open(file)
         
