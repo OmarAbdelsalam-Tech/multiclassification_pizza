@@ -70,7 +70,7 @@ if choice == "Pizza Testing":
          import requests
 
          url = 'https://drive.google.com/uc?id=1k0McXeXNYT-rvDt1wmPcDpP4f_HR1Kps'
-         r = requests.get(url)
+         response = requests.get(url)
 
          with open('Pizza_Model.h5', 'wb') as f:
                 f.write(response.content)
