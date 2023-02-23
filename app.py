@@ -100,7 +100,11 @@ if choice == "Pizza Testing":
          img_tensor = tf.expand_dims(img_tensor, axis=0)
 
         # Normalize the image tensor
+        
+         img_tensor = tf.cast(img_tensor, tf.float32)
          img_tensor = img_tensor / 255.0
+
+     
     
          yhat = new_model.predict(img_tensor)
          
