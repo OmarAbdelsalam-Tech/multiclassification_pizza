@@ -1,4 +1,4 @@
-pip install -r requirments.txt
+!pip install -r requirments.txt
 
 import streamlit as st
 import numpy as np
