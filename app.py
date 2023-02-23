@@ -72,8 +72,8 @@ if choice == "Pizza Testing":
          url = 'https://drive.google.com/uc?id=1k0McXeXNYT-rvDt1wmPcDpP4f_HR1Kps'
          r = requests.get(url)
 
-         with open('Pizza_model.h5', 'wb') as f:
-            f.write(r.content)
+         with open('Pizza_Model.h5', 'wb') as f:
+                f.write(response.content)
             
          from keras.models import Sequential, load_model
          new_model = load_model('Pizza_Model.h5')
