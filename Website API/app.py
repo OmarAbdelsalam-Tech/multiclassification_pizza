@@ -32,7 +32,7 @@ if choice == "Pizza Testing":
 
     st.title("Please provide an image of your pizza!")
     
-    import streamlit as st
+  
     import base64
 
     # Load the image file
@@ -73,7 +73,14 @@ if choice == "Pizza Testing":
     button = st.button('Click me and find out if your pizza is BUSSIN or DISGUSTING')
         
     if button:
-         
+         import requests
+
+         url = 'https://drive.google.com/uc?id=1k0McXeXNYT-rvDt1wmPcDpP4f_HR1Kps'
+         r = requests.get(url)
+
+         with open('Pizza_model.h5', 'wb') as f:
+            f.write(r.content)
+            
          from keras.models import Sequential, load_model
          new_model = load_model('Pizza_Model.h5')
         
