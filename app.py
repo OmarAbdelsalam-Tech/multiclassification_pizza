@@ -14,27 +14,6 @@ import requests
 import base64
 
 
-# Load the background image
-background_image = open('backround.jpg', 'rb')
-# Convert the image to RGBA format
-background_image = background_image.convert('RGBA')
-
-# Get the image as a byte string
-background_image_byte_arr = io.BytesIO()
-background_image.save(background_image_byte_arr, format='PNG')
-background_image_byte_arr = background_image_byte_arr.getvalue()
-# Set the app's background image
-page_bg_img = '''
-<style>
-body {
-background-image: url("data:image/png;base64,%s");
-background-size: cover;
-}
-</style>
-''' % base64.b64encode(background_image_byte_arr).decode()
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
 
 st.title("This Website uses Deep Learning to Multi-Classifies Pizza based on how cooked it is ")
 st.subheader("Contributions: Omar , Thomas, and Collin")
