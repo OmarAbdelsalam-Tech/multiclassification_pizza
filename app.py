@@ -12,10 +12,9 @@ from PIL import Image
 global file
 
 
-import streamlit as st
 
 # Define the background image URL
-background_image = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+background_image = Image.open('backround.jpg')
 
 # Define the CSS for the background image
 css = f"""
