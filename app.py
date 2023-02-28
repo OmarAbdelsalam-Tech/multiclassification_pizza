@@ -118,11 +118,11 @@ if button:
             st.balloons()
          elif 0.41 <= yhat <= 0.60:
             st.subheader('Needs more time')
-            st.balloons()
+            
          elif 0.61 <= yhat <= 1.0:
         
             st.subheader(f'ITS RAWW - Ramsey')
-            st.balloons()
+           
 pass
     
 
