@@ -10,6 +10,7 @@ from keras.models import Sequential, load_model
 import os
 from PIL import Image
 global file
+import requests
 
 url = 'https://drive.google.com/uc?id=1QQH7FG8SCLv0BO7qEXr4L6PqhTs-ln8I'
 response = requests.get(url)
