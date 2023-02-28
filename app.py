@@ -13,7 +13,7 @@ global file
 
 st.title("This Website uses Deep Learning to Multi-Classifies Pizza based on how cooked it is ")
 st.subheader("Contributions: Omar , Thomas, and Collin")
-st.title("Please provide an image of your pizza!")
+st.subheader("Please provide an image of your pizza!")
     
   
 import base64
@@ -27,7 +27,7 @@ cooked_image = base64.b64encode(cooked_bytes).decode()
 
     # Display the image in the Streamlit app
     #st.image(cooked_bytes, caption='Cooked Example')
-st.caption("Picture Example of a Cooked Pizza ")
+st.caption("Examples: ")
     # Create a download button for the encoded image
 href = f'<a href="data:image/jpg;base64,{cooked_image}" download="Cooked.jpg">Download Cooked</a>'
 st.markdown(href, unsafe_allow_html=True)
@@ -42,7 +42,7 @@ uncooked_image = base64.b64encode(Uncooked_bytes).decode()
 
     # Display the image in the Streamlit app
     #st.image(Uncooked_bytes, caption='UnCooked Example')
-st.caption("Picture Example of an UnCooked Pizza ")
+
     # Create a download button for the encoded image
 href = f'<a href="data:image/jpg;base64,{uncooked_image}" download="Uncooked.jpg">Download UnCooked</a>'
 st.markdown(href, unsafe_allow_html=True)
