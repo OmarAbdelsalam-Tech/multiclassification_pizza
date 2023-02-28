@@ -17,7 +17,7 @@ import streamlit as st
 st.markdown("""
 <style>
 .reportview-container {
-    background-image: url("file:///C:/Users/abdel/Desktop/backround.jpg")
+    background-image: url("https://th.bing.com/th/id/R.b9a6883b44bc05dee82168540091ae78?rik=WACrtKRmUsgXnA&pid=ImgRaw&r=0")
 </style>
 """, unsafe_allow_html=True)
 
