@@ -14,12 +14,16 @@ import requests
 import base64
 import streamlit as st
 
-st.markdown("""
+page_bg_img = '''
 <style>
-.reportview-container {
-    background-image: url("https://th.bing.com/th/id/R.b9a6883b44bc05dee82168540091ae78?rik=WACrtKRmUsgXnA&pid=ImgRaw&r=0")
+body {
+background-image: url("https://th.bing.com/th/id/R.b9a6883b44bc05dee82168540091ae78?rik=WACrtKRmUsgXnA&pid=ImgRaw&r=0");
+background-size: cover;
+}
 </style>
-""", unsafe_allow_html=True)
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 
