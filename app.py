@@ -13,22 +13,27 @@ global file
 import requests
 import base64
 import streamlit as st
+import base64
+open('backround.jpg', 'rb')
+def get_base64(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
-import streamlit as st
-from streamlit.components.v1 import declare_component
+def set_background(png_file):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+    <style>
+    body {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    
+    st.markdown(page_bg_img, unsafe_allow_html=True)
 
-# Declare the component
-background_image = declare_component(
-    "background_image",
-    url="https://th.bing.com/th/id/R.b9a6883b44bc05dee82168540091ae78?rik=WACrtKRmUsgXnA&pid=ImgRaw&r=0", # The URL where your frontend code is running
-)
-
-# Get user input
-image_url = st.text_input("Enter an image URL")
-
-# Render the component
-background_image(image_url=image_url)
-
+set_background('backround.jpg')
 
 
 st.title("This Website uses Deep Learning to Multi-Classifies Pizza based on how cooked it is ")
