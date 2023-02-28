@@ -11,6 +11,23 @@ import os
 from PIL import Image
 global file
 
+
+import streamlit as st
+
+# Define the background image URL
+background_image = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+
+# Define the CSS for the background image
+css = f"""
+body {{
+background-image: url('{background_image}');
+background-size: cover;
+}}
+"""
+
+# Use the `st.markdown` function to apply the CSS
+st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+
 st.title("This Website uses Deep Learning to Multi-Classifies Pizza based on how cooked it is ")
 st.subheader("Contributions: Omar , Thomas, and Collin")
 st.subheader("Please provide an image of your pizza!")
