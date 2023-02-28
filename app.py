@@ -24,8 +24,6 @@ import base64
 # Set page config to wide layout and give the page a title
 st.set_page_config(page_title="My Streamlit App", layout="wide")
 
-# Load the background image using an absolute file path
-background_image = Image.open("background.jpg")
 
 # Set the app's background image
 page_bg_img = '''
