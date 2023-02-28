@@ -12,18 +12,12 @@ from PIL import Image
 global file
 
 with st.sidebar:
-        choice = st.radio("Navigation",["Home","Pizza Testing"])
+        choice = st.radio("Navigation",["Home"])
 
 
 if choice == "Home":
     st.title("This Website uses Deep Learning to Multi-Classifies Pizza based on how cooked it is ")
     st.subheader("Contributions: Omar , Thomas, and Collin")
-
-    pass
-
-if choice == "Pizza Testing":
-
-
     st.title("Please provide an image of your pizza!")
     
   
@@ -85,7 +79,7 @@ if choice == "Pizza Testing":
 
          image = Image.open(file)
                 
-         st.subheader("Resized Image:")  
+         
 
         # Resize the image to 256x256 pixels
          img_resized = image.resize((256, 256))
@@ -115,7 +109,7 @@ if choice == "Pizza Testing":
          my_bar = st.progress(0, text=progress_text)
 
          for percent_complete in range(100):
-                time.sleep(0.1)
+                time.sleep(0.0001)
                 my_bar.progress(percent_complete + 1, text=progress_text)
         
                 
