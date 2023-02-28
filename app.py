@@ -17,21 +17,17 @@ import base64
 
 import streamlit as st
 
-def main():
-    st.set_page_config(page_title="My Streamlit App")
-    st.markdown(
-        """
-        <style>
-            {css}
-        </style>
-        """.format(css=open('backround.jpg', 'rb').read()),
-        unsafe_allow_html=True
-    )
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: open('backround.jpg', 'rb')
+    }
 
-if __name__ == "__main__":
-    main()
-
-
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 st.title("This Website uses Deep Learning to Multi-Classifies Pizza based on how cooked it is ")
