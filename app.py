@@ -33,7 +33,7 @@ def set_background(png_file):
     
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-set_background('backround.jpg')
+
 
 
 st.title("This Website uses Deep Learning to Multi-Classifies Pizza based on how cooked it is ")
@@ -149,7 +149,7 @@ if button:
             st.subheader(f'ITS RAWW - Ramsey')
            
 pass
-    
+set_background('backround.jpg')
 
 
                                     
