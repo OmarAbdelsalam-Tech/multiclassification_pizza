@@ -34,7 +34,7 @@ st.markdown(href, unsafe_allow_html=True)
     
     
     # Load the image file
-    Uncooked = open('Uncooked.jpg', 'rb')
+Uncooked = open('Uncooked.jpg', 'rb')
 Uncooked_bytes = Uncooked.read()
 
     # Encode the image bytes as base64
