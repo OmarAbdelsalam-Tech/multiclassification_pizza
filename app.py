@@ -52,7 +52,7 @@ st.subheader("Upload your pizza Image here:")
 file = st.file_uploader(" ", type=["jpg", "jpeg", "png"])
     
 if file:
-    st.image(file,caption='BEFORE RESIZING')
+    st.image(file,caption=' ')
         
 button = st.button('Click me and find out if your pizza is BUSSIN or DISGUSTING')
         
