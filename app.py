@@ -14,12 +14,18 @@ import requests
 import base64
 
 
-# Set page config to wide layout and give the page a title
-st.set_page_config(page_title="My Streamlit App", layout="wide")
-
 # Load the background image
 background_image = cooked = open('backround.jpg', 'rb')
 
+import streamlit as st
+from PIL import Image
+import base64
+
+# Set page config to wide layout and give the page a title
+st.set_page_config(page_title="My Streamlit App", layout="wide")
+
+# Load the background image using an absolute file path
+background_image = Image.open("background.jpg")
 
 # Set the app's background image
 page_bg_img = '''
@@ -29,7 +35,7 @@ background-image: url("data:image/png;base64,%s");
 background-size: cover;
 }
 </style>
-''' % base64.b64encode(background_image.getvalue()).decode()
+''' % base64.b64encode(background_image.tobytes()).decode()
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
