@@ -11,56 +11,51 @@ import os
 from PIL import Image
 global file
 
-with st.sidebar:
-        choice = st.radio("Navigation",["Home"])
-
-
-if choice == "Home":
-    st.title("This Website uses Deep Learning to Multi-Classifies Pizza based on how cooked it is ")
-    st.subheader("Contributions: Omar , Thomas, and Collin")
-    st.title("Please provide an image of your pizza!")
+st.title("This Website uses Deep Learning to Multi-Classifies Pizza based on how cooked it is ")
+st.subheader("Contributions: Omar , Thomas, and Collin")
+st.title("Please provide an image of your pizza!")
     
   
-    import base64
+import base64
 
     # Load the image file
-    cooked = open('cooked.jpg', 'rb')
-    cooked_bytes = cooked.read()
+cooked = open('cooked.jpg', 'rb')
+cooked_bytes = cooked.read()
 
     # Encode the image bytes as base64
-    cooked_image = base64.b64encode(cooked_bytes).decode()
+cooked_image = base64.b64encode(cooked_bytes).decode()
 
     # Display the image in the Streamlit app
     #st.image(cooked_bytes, caption='Cooked Example')
-    st.caption("Picture Example of a Cooked Pizza ")
+st.caption("Picture Example of a Cooked Pizza ")
     # Create a download button for the encoded image
-    href = f'<a href="data:image/jpg;base64,{cooked_image}" download="Cooked.jpg">Download Cooked</a>'
-    st.markdown(href, unsafe_allow_html=True)
+href = f'<a href="data:image/jpg;base64,{cooked_image}" download="Cooked.jpg">Download Cooked</a>'
+st.markdown(href, unsafe_allow_html=True)
     
     
     # Load the image file
     Uncooked = open('Uncooked.jpg', 'rb')
-    Uncooked_bytes = Uncooked.read()
+Uncooked_bytes = Uncooked.read()
 
     # Encode the image bytes as base64
-    uncooked_image = base64.b64encode(Uncooked_bytes).decode()
+uncooked_image = base64.b64encode(Uncooked_bytes).decode()
 
     # Display the image in the Streamlit app
     #st.image(Uncooked_bytes, caption='UnCooked Example')
-    st.caption("Picture Example of an UnCooked Pizza ")
+st.caption("Picture Example of an UnCooked Pizza ")
     # Create a download button for the encoded image
-    href = f'<a href="data:image/jpg;base64,{uncooked_image}" download="Uncooked.jpg">Download UnCooked</a>'
-    st.markdown(href, unsafe_allow_html=True)
+href = f'<a href="data:image/jpg;base64,{uncooked_image}" download="Uncooked.jpg">Download UnCooked</a>'
+st.markdown(href, unsafe_allow_html=True)
     
-    st.subheader("Upload your pizza Image here:")
-    file = st.file_uploader("Upload your Image Here", type=["jpg", "jpeg", "png"])
+st.subheader("Upload your pizza Image here:")
+file = st.file_uploader("Upload your Image Here", type=["jpg", "jpeg", "png"])
     
-    if file:
-        st.image(file,caption='BEFORE RESIZING')
+if file:
+    st.image(file,caption='BEFORE RESIZING')
         
-    button = st.button('Click me and find out if your pizza is BUSSIN or DISGUSTING')
+button = st.button('Click me and find out if your pizza is BUSSIN or DISGUSTING')
         
-    if button:
+if button:
          import requests
 
          url = 'https://drive.google.com/uc?id=1k0McXeXNYT-rvDt1wmPcDpP4f_HR1Kps'
@@ -127,7 +122,7 @@ if choice == "Home":
         
             st.subheader(f'ITS RAWW - Ramsey')
             st.balloons()
-    pass
+pass
     
 
 
