@@ -12,20 +12,28 @@ from PIL import Image
 global file
 
 
+# Set page configuration
+st.set_page_config(
+    page_title="My Streamlit App",
+    page_icon=":memo:",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
-# Define the background image URL
-background_image = Image.open('backround.jpg')
-
-# Define the CSS for the background image
-css = f"""
-body {{
-background-image: url('{background_image}');
-background-size: cover;
-}}
-"""
-
-# Use the `st.markdown` function to apply the CSS
-st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+# Set background image
+background_image = Image.open("backround.jpg")
+st.markdown(
+    f"""
+    <style>
+    .reportview-container {{
+        background: url(data:image/jpeg;base64,{base64.b64encode(background_image.getvalue()).decode()})
+        fixed;
+        background-size: cover;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.title("This Website uses Deep Learning to Multi-Classifies Pizza based on how cooked it is ")
 st.subheader("Contributions: Omar , Thomas, and Collin")
