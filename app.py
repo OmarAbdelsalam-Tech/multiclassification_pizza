@@ -14,16 +14,20 @@ import requests
 import base64
 import streamlit as st
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://th.bing.com/th/id/R.b9a6883b44bc05dee82168540091ae78?rik=WACrtKRmUsgXnA&pid=ImgRaw&r=0");
-background-size: cover;
-}
-</style>
-'''
+import streamlit as st
+from streamlit.components.v1 import declare_component
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
+# Declare the component
+background_image = declare_component(
+    "background_image",
+    url="https://th.bing.com/th/id/R.b9a6883b44bc05dee82168540091ae78?rik=WACrtKRmUsgXnA&pid=ImgRaw&r=0", # The URL where your frontend code is running
+)
+
+# Get user input
+image_url = st.text_input("Enter an image URL")
+
+# Render the component
+background_image(image_url=image_url)
 
 
 
