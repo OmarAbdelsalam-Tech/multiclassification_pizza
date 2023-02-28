@@ -11,6 +11,7 @@ import os
 from PIL import Image
 global file
 import requests
+import base64
 
 
 # Set page config to wide layout and give the page a title
