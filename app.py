@@ -11,7 +11,13 @@ import os
 from PIL import Image
 global file
 
+url = 'https://drive.google.com/uc?id=1QQH7FG8SCLv0BO7qEXr4L6PqhTs-ln8I'
+response = requests.get(url)
 
+with open('backround.jpg', 'wb') as f:
+      f.write(response.content)
+        
+        
 # Set page config to wide layout and give the page a title
 st.set_page_config(page_title="My Streamlit App", layout="wide")
 
