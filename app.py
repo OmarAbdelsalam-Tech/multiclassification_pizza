@@ -47,8 +47,9 @@ uncooked_image = base64.b64encode(Uncooked_bytes).decode()
 href = f'<a href="data:image/jpg;base64,{uncooked_image}" download="Uncooked.jpg">Download UnCooked</a>'
 st.markdown(href, unsafe_allow_html=True)
     
+st.subheader("Upload your pizza Image here:")
 
-file = st.file_uploader("Upload your Image Here", type=["jpg", "jpeg", "png"])
+file = st.file_uploader(" ", type=["jpg", "jpeg", "png"])
     
 if file:
     st.image(file,caption='BEFORE RESIZING')
