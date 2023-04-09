@@ -16,7 +16,7 @@ import streamlit as st
 import base64
 
 
-st.title("This Website uses Deep Learning to Multi-Classifies Pizza based on how cooked it is ")
+st.title("This Website uses Deep Learning to Binary Classify Pizza if it's cooked or not yet.")
 st.subheader("Contributions: Omar , Thomas, and Collin")
 st.subheader("Please provide an image of your pizza!")
     
