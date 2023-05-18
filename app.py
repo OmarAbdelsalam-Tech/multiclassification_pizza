@@ -17,7 +17,7 @@ import base64
 
 
 st.title("This Website uses Deep Learning to Binary Classify Pizza if it's cooked or not yet.")
-st.subheader("Contributions: Omar , Thomas, and Collin")
+st.subheader("Contributions: Omar Abdelsalam")
 st.subheader("Please provide an image of your pizza!")
     
   
